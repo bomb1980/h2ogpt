@@ -1,0 +1,19 @@
+docker-compose up
+
+git clone https://github.com/h2oai/h2ogpt.git
+
+
+ 
+pip install -r requirements.txt
+pip install -r reqs_optional/requirements_optional_langchain.txt
+pip install -r reqs_optional/requirements_optional_gpt4all.txt
+# if don't have wget, copy the below link to browser and download and place file into h2ogpt folder
+wget https://huggingface.co/TheBloke/Llama-2-7B-Chat-GGML/resolve/main/llama-2-7b-chat.ggmlv3.q8_0.bin
+python generate.py --base_model='llama' --prompt_type=llama2
+
+
+
+https://arxiv.org/pdf/2306.08161.pdf
+
+
+https://huggingface.co/h2oai/h2ogpt-gm-oasst1-en-2048-falcon-7b-v3
